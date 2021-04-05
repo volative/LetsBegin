@@ -48,6 +48,16 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+
+/*
+|--------------------------------------------------------------------------
+| Lumen API Generator by Flipbox
+|--------------------------------------------------------------------------
+*/
+
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+
+
 /*
 |--------------------------------------------------------------------------
 | Register Config Files
@@ -113,3 +123,4 @@ $app->router->group([
 });
 
 return $app;
+
