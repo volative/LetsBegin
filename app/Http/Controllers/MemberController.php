@@ -15,6 +15,9 @@ class MemberController extends Controller
     public function index()
     {
         //
+        //echo "<h1>Member</h1>";
+
+        return response()->json("ini api member");
     }
 
     /**
@@ -81,5 +84,8 @@ class MemberController extends Controller
     public function destroy(Member $member)
     {
         //
+
+        return response()->json("ini delete $member");
+    
     }
 }

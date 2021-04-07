@@ -2,6 +2,9 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use App\Http\Controllers\MemberController;
+use App\Models\Member;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -16,3 +19,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get( 'member', 'MemberController@index');
+
+$router->delete( 'member/{id}', 'MemberController@destroy');
